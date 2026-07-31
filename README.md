@@ -1,31 +1,167 @@
-# PERMANOVA: Permutational Multivariate Analysis of Variance (PERMANOVA)
+# Statistical Methods in R and Python
 
-Permutational Multivariate Analysis of Variance (PERMANOVA) is a non-parametric statistical method used to assess the differences in multivariate data among groups or treatments. It is particularly useful when the assumptions of traditional parametric techniques like MANOVA (Multivariate Analysis of Variance) are not met or when dealing with complex ecological or biological data.
+> A curated collection of statistical methods implemented from first principles, with mathematical intuition, reproducible code, practical examples, and applications to real-world scientific problems.
 
-PERMANOVA works by randomly permuting (rearranging) the observations within the data matrix while maintaining the same group assignments. By doing this repeatedly, it creates a null distribution against which the observed differences can be compared to determine if they are statistically significant. Here's how PERMANOVA works:
+![GitHub last commit](https://img.shields.io/github/last-commit/BNTechie/Statistical-tests)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Language](https://img.shields.io/badge/R-Python-orange)
 
-1. **Data Structure**: PERMANOVA is suitable for situations where you have multivariate data with several dependent variables (e.g., species composition in ecological communities) and a categorical factor (e.g., different experimental treatments, sites, or time points).
+---
 
-2. **Hypotheses**: The primary hypothesis tested by PERMANOVA is whether there are significant differences among the groups defined by the categorical factor in terms of the multivariate data. The null hypothesis is that there are no differences among groups.
+## About
 
-3. **Permutations**: PERMANOVA calculates a test statistic based on the multivariate distance or dissimilarity between observations within groups and between groups. To assess the significance of this statistic, it randomly permutes the data, shuffling the group assignments multiple times (often thousands of permutations).
+Statistics is far more than a collection of tests.
 
-4. **Test Statistic**: The most commonly used test statistic in PERMANOVA is the pseudo-F statistic, which measures the ratio of the between-group variability to the within-group variability in the dissimilarity matrix. The observed pseudo-F statistic is compared to the distribution of pseudo-F values generated from the permuted data to determine its significance.
+Every statistical method is built upon mathematical assumptions about uncertainty, variability, dependence, and inference. Understanding these foundations is essential for applying statistical methods correctly in scientific research.
 
-5. **Example**:
+This repository is an ongoing collection of statistical methods that I have implemented, studied, or applied throughout my work in computational science, statistical genetics, biomedical research, and machine learning.
 
-   Let's say you are an ecologist studying the impact of three different types of land use (Agricultural, Urban, and Natural) on plant species composition in a particular region. You collect data on the abundance of various plant species at multiple sampling sites within each land use type.
+Rather than presenting statistical methods as "recipes", each tutorial aims to explain
 
-   - Null Hypothesis (H0): There is no difference in plant species composition among the three land use types.
+- the underlying mathematical intuition,
+- the statistical assumptions,
+- implementation in R and/or Python,
+- visualization,
+- interpretation of results,
+- practical applications,
+- and common pitfalls.
 
-   - Alternative Hypothesis (Ha): There are significant differences in plant species composition among the three land use types.
+The emphasis is on learning **why a method works**, not simply how to call a software function.
 
-   You would perform a PERMANOVA using your multivariate plant species data and the land use type as a categorical factor. After running the analysis and performing permutations, you obtain an observed pseudo-F statistic.
+---
 
-   If the observed pseudo-F statistic is significantly different from the pseudo-F values obtained from the permuted data (i.e., it falls outside the range of values expected by chance), you would reject the null hypothesis, indicating that there are indeed significant differences in plant species composition among the land use types.
+# Repository Contents
 
-PERMANOVA is a robust and versatile method for analyzing multivariate data, especially when the data do not meet the assumptions of traditional parametric approaches or when dealing with complex ecological or biological datasets. It provides a powerful tool for testing the significance of group differences while accounting for the interrelationships among multiple variables.
+| Category | Topics |
+|-----------|--------|
+| Classical Statistics | t-test, ANOVA, Chi-square Test, Fisher's Exact Test |
+| Regression Models | Linear Regression, Logistic Regression, Generalized Linear Models |
+| Survival Analysis | Kaplan–Meier, Cox Proportional Hazards Model |
+| Mixed Models | Linear Mixed Models, Random Effects |
+| Multivariate Statistics | PCA, MANOVA, PERMANOVA |
+| Bayesian Statistics | Bayesian inference *(planned)* |
+| Multiple Testing | Bonferroni, Benjamini–Hochberg |
+| Resampling Methods | Bootstrap, Permutation Tests |
+| Statistical Genetics | Heritability, GWAS-related methods *(growing)* |
+| Machine Learning Statistics | ROC curves, Cross-validation, Model evaluation |
 
-An example code in R is provided in this repository following the site: https://archetypalecology.wordpress.com/2018/02/21/permutational-multivariate-analysis-of-variance-permanova-in-r-preliminary/
+---
 
+# Repository Philosophy
+
+The goal of this repository is to bridge the gap between mathematical statistics and practical data analysis.
+
+Each tutorial attempts to answer five questions:
+
+1. What problem does this method solve?
+2. What mathematical assumptions does it make?
+3. How is the method derived?
+4. How can it be implemented in R or Python?
+5. How should the results be interpreted?
+
+Whenever possible, tutorials include
+
+- mathematical derivations,
+- intuitive explanations,
+- reproducible code,
+- figures,
+- simulated examples,
+- references to the original literature.
+
+---
+
+# Current Tutorials
+
+| Tutorial | Status |
+|----------|:------:|
+| Covariance Matrix | ✅ |
+| Survival Analysis | ✅ |
+| PERMANOVA | ✅ |
+| Statistical Tests | ✅ |
+| Linear Regression | 🚧 |
+| Logistic Regression | 🚧 |
+| Mixed Models | 🚧 |
+| Bayesian Statistics | 🚧 |
+| Statistical Genetics | 🚧 |
+
+---
+
+# Technologies
+
+- R
+- Python
+- NumPy
+- SciPy
+- pandas
+- statsmodels
+- survival
+- ggplot2
+- matplotlib
+
+---
+
+# Intended Audience
+
+This repository is intended for
+
+- Data Scientists
+- Computational Biologists
+- Statistical Geneticists
+- Graduate Students
+- Researchers
+- Machine Learning Practitioners
+- Anyone interested in learning statistical methods from first principles
+
+---
+
+# Future Topics
+
+Some topics currently planned include
+
+- Linear Mixed Models
+- Generalized Linear Mixed Models
+- REML
+- Bayesian Regression
+- Mediation Analysis
+- Structural Equation Models
+- Bootstrapping
+- Permutation Testing
+- Multiple Testing Correction
+- Meta-analysis
+- Mendelian Randomization
+- Polygenic Risk Scores
+- GWAS Quality Control
+- Heritability Estimation
+- Principal Component Analysis
+- Canonical Correlation Analysis
+
+---
+
+# Contributing
+
+Suggestions, discussions, and corrections are always welcome.
+
+If you notice an error, have an idea for a new tutorial, or would like to improve an existing implementation, feel free to open an issue or submit a pull request.
+
+---
+
+# Author
+
+**Nivedita Bhadra, PhD**
+
+Computational Scientist
+
+Physics → Statistics → Machine Learning → Statistical Genetics → Biomedical Data Science
+
+GitHub: https://github.com/BNTechie
+
+Medium: https://medium.com/@nivedita.home
+
+LinkedIn: https://www.linkedin.com/in/nivedita-bhadra-b5149130
+
+---
+
+# License
+
+This repository is released under the MIT License.
 
