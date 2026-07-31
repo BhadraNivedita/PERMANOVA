@@ -47,7 +47,7 @@ The emphasis is on learning **why a method works**, not simply how to call a sof
 
 ---
 
-# Repository Philosophy
+# What is there?
 
 The goal of this repository is to bridge the gap between mathematical statistics and practical data analysis.
 
